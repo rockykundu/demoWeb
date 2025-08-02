@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday My Love</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+    
+    :root {
+      --primary: #ff7eb9;
+      --secondary: #ff65a3;
+      --accent: #7afcff;
+      --text: #5e2b41;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff9fb;
+      color: var(--text);
+      overflow-x: hidden;
+    }
+    
+    .dancing-font {
+      font-family: 'Dancing Script', cursive;
+    }
+    
+    .heartbeat {
+      animation: heartbeat 1.5s ease-in-out infinite both;
+    }
+    
+    .float {
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    .section {
+      transition: all 0.5s ease;
+    }
+    
+    .section:hover {
+      transform: translateY(-5px);
+    }
+    
+    @keyframes heartbeat {
+      0% { transform: scale(1); }
+      14% { transform: scale(1.3); }
+      28% { transform: scale(1); }
+      42% { transform: scale(1.3); }
+      70% { transform: scale(1); }
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    .text-shadow {
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .polaroid {
+      background: white;
+      padding: 1rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transform: rotate(1deg);
+      transition: all 0.3s ease;
+    }
+    
+    .polaroid:hover {
+      transform: rotate(0deg) scale(1.05);
+    }
+    
+    .superpower-card {
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+    }
+    
+    .timeline-item {
+      position: relative;
+      padding-left: 3rem;
+      margin-bottom: 2rem;
+    }
+    
+    .timeline-item:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--primary), var(--secondary));
+    }
+    
+    .timeline-dot {
+      position: absolute;
+      left: -10px;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--secondary);
+    }
+    
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease;
+    }
+    
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="overflow-x-hidden">
+  <!-- Confetti Canvas -->
+  <canvas id="confetti" class="fixed top-0 left-0 w-full h-full pointer-events-none z-50"></canvas>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-pink-100 to-purple-100">
+    <div class="container mx-auto px-4 py-20 flex flex-col items-center justify-center text-center relative z-10">
+      <div class="heartbeat mb-8">
+        <h1 class="text-6xl md:text-8xl font-bold dancing-font text-pink-600 mb-6">Happy Birthday!</h1>
+        <p class="text-xl md:text-2xl text-pink-900 mb-8">To the most amazing woman in my life</p>
+      </div>
+      
+      <div class="polaroid float max-w-md rounded-lg overflow-hidden mb-12">
+        <img src="./assets/images/I8o1qVB.png" alt="Couple smiling together in golden sunset light, embracing with city skyline in background" class="w-full h-auto">
+        <p class="py-4 dancing-font text-2xl text-pink-700">My Heart Belongs To You</p>
+      </div>
+      
+      <div class="max-w-2xl mx-auto bg-white/70 p-6 rounded-xl backdrop-blur-sm shadow-lg">
+        <p class="text-lg md:text-xl mb-4">Every day with you is a gift, but today is extra special because it's the day the world became brighter when you were born.</p>
+        <p class="dancing-font text-3xl text-pink-600">I love you more than words can say</p>
+      </div>
+      
+      <div class="mt-12 animate-bounce">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-pink-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
+        <p class="text-sm text-pink-700 mt-2">Scroll for more love</p>
+      </div>
+    </div>
+    
+    <div class="absolute top-0 left-0 w-full h-full bg-pink-200 opacity-20" style="background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg width=\"100\" height=\"20\" viewBox=\"0 0 100 20\" xmlns=\"http://www.w3.org/2000/svg\"%3e%3cpath d=\"M21.184 20c.357-.13.72-.264 1.088-.402l1.768-.661C33.64 15.347 39.647 14 50 14c10.271 0 15.362 1.222 24.629 4.928.955.383 1.869.74 2.75 1.072h6.225c-2.51-.73-5.139-1.691-8.233-2.928C65.888 13.278 60.562 12 50 12c-10.626 0-16.855 1.397-26.66 5.063l-1.767.662c-2.475.923-4.66 1.674-6.724 2.275h6.335zm0-20C13.258 2.892 8.077 4 0 4V2c5.744 0 9.951-.75 13.325-1.996l1.767-.662C21.338.456 24.864 0 30 0c10.271 0 15.362 1.222 24.629 4.928C84.112 6.722 89.438 8 100 8V6c-10.274 0-15.362-1.222-24.629-4.928C65.888.278 60.562 0 50 0 35.111 0 27.25 1.017 21.184 4z\" fill=\"%239C92AC\" fill-opacity=\".25\" fill-rule=\"evenodd\"/%3e%3c/svg%3e');">
+    </div>
+  </section>
+
+  <!-- Our Story Section -->
+  <section id="our-story" class="py-20 bg-gradient-to-b from-white to-pink-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16 animate-on-scroll">
+        <h2 class="text-4xl md:text-5xl font-bold dancing-font text-pink-600 mb-4">Our Story</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-pink-400 to-purple-400 mx-auto"></div>
+        <p class="text-xl text-pink-800 mt-6 max-w-3xl mx-auto">The beautiful journey of how two hearts became one</p>
+      </div>
+      
+      <div class="max-w-4xl mx-auto">
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-dot"></div>
+          <div class="pl-8">
+            <h3 class="text-2xl font-bold text-pink-700 mb-2">The First Meeting</h3>
+            <p class="text-pink-900">That magical moment our eyes met across the room. I knew instantly there was something special about you.</p>
+            <div class="mt-4 flex justify-center">
+              <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/91884962-1f5e-4d5a-a099-8fa51d4ea8e1.png" alt="Coffee shop setting where we first met, with warm lighting and smiles, two cups on the table" class="rounded-lg shadow-md w-full max-w-md">
+            </div>
+          </div>
+        </div>
+        
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-dot"></div>
+          <div class="pl-8">
+            <h3 class="text-2xl font-bold text-pink-700 mb-2">First Date</h3>
+            <p class="text-pink-900">Dinner under the stars where we talked for hours and completely lost track of time.</p>
+            <div class="mt-4 flex justify-center">
+              <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a9794982-73dd-4b15-9e89-3621fcaf89d7.png" alt="Romantic outdoor dinner setting with string lights and wine glasses" class="rounded-lg shadow-md w-full max-w-md">
+            </div>
+          </div>
+        </div>
+        
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-dot"></div>
+          <div class="pl-8">
+            <h3 class="text-2xl font-bold text-pink-700 mb-2">The First "I Love You"</h3>
+            <p class="text-pink-900">That nervous, perfect moment when we first said those three magical words to each other.</p>
+            <div class="mt-4 flex justify-center">
+              <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9e1e0189-78c7-4bfb-a143-355074f7291b.png" alt="Couple holding hands on a beach at sunset, waves gently rolling in" class="rounded-lg shadow-md w-full max-w-md">
+            </div>
+          </div>
+        </div>
+        
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-dot"></div>
+          <div class="pl-8">
+            <h3 class="text-2xl font-bold text-pink-700 mb-2">Today</h3>
+            <p class="text-pink-900">Every day with you is an adventure. You make my world brighter just by being in it.</p>
+            <div class="mt-4 flex justify-center">
+              <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8d573f8a-65ae-4a83-85ba-b91c1942a598.png" alt="Happy couple laughing together during a spontaneous moment, showing genuine joy" class="rounded-lg shadow-md w-full max-w-md">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Her Superpowers Section -->
+  <section id="superpowers" class="py-20 bg-gradient-to-b from-pink-50 to-purple-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16 animate-on-scroll">
+        <h2 class="text-4xl md:text-5xl font-bold dancing-font text-purple-600 mb-4">Your Superpowers</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto"></div>
+        <p class="text-xl text-purple-800 mt-6 max-w-3xl mx-auto">The magical qualities that make you absolutely incredible</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="superpower-card p-8 shadow-lg rounded-xl animate-on-scroll hover:shadow-xl transition-all duration-300 border border-purple-200">
+          <div class="text-pink-600 mb-4 text-5xl">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-center text-purple-800 mb-4">Heart Healer</h3>
+          <p class="text-purple-900 text-center">You have this incredible ability to make everything better with just your presence. Your smile can brighten my darkest days.</p>
+        </div>
+        
+        <div class="superpower-card p-8 shadow-lg rounded-xl animate-on-scroll hover:shadow-xl transition-all duration-300 border border-purple-200">
+          <div class="text-pink-600 mb-4 text-5xl">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-center text-purple-800 mb-4">Laughter Creator</h3>
+          <p class="text-purple-900 text-center">You make me laugh like no one else. Your sense of humor and joy for life are absolutely contagious.</p>
+        </div>
+        
+        <div class="superpower-card p-8 shadow-lg rounded-xl animate-on-scroll hover:shadow-xl transition-all duration-300 border border-purple-200">
+          <div class="text-pink-600 mb-4 text-5xl">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-center text-purple-800 mb-4">Joy Multiplier</h3>
+          <p class="text-purple-900 text-center">You amplify all the happy moments and turn ordinary days into special memories.</p>
+        </div>
+        
+        <div class="superpower-card p-8 shadow-lg rounded-xl animate-on-scroll hover:shadow-xl transition-all duration-300 border border-purple-200">
+          <div class="text-pink-600 mb-4 text-5xl">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-center text-purple-800 mb-4">Wisdom Giver</h3>
+          <p class="text-purple-900 text-center">Your advice and perspective always help me see things more clearly. You're my personal life guru.</p>
+        </div>
+        
+        <div class="superpower-card p-8 shadow-lg rounded-xl animate-on-scroll hover:shadow-xl transition-all duration-300 border border-purple-200">
+          <div class="text-pink-600 mb-4 text-5xl">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-center text-purple-800 mb-4">Adventure Spark</h3>
+          <p class="text-purple-900 text-center">You bring excitement and spontaneity into my life. Every day with you feels like an adventure.</p>
+        </div>
+        
+        <div class="superpower-card p-8 shadow-lg rounded-xl animate-on-scroll hover:shadow-xl transition-all duration-300 border border-purple-200">
+          <div class="text-pink-600 mb-4 text-5xl">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-center text-purple-800 mb-4">Love Amplifier</h3>
+          <p class="text-purple-900 text-center">Your capacity for love and kindness inspires me daily. You make me want to be a better person.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Favorite Memories Section -->
+  <section id="memories" class="py-20 bg-gradient-to-b from-purple-50 to-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16 animate-on-scroll">
+        <h2 class="text-4xl md:text-5xl font-bold dancing-font text-pink-600 mb-4">Our Favorite Memories</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-pink-400 to-purple-400 mx-auto"></div>
+        <p class="text-xl text-pink-800 mt-6 max-w-3xl mx-auto">Moments I'll cherish forever with you</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="group rounded-xl overflow-hidden shadow-lg relative animate-on-scroll">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1621e784-0813-43cb-8e55-1ac391528347.png" alt="Couple hiking together at sunrise with breathtaking mountain views" class="w-full h-64 object-cover transition-all duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+            <div>
+              <h3 class="text-white text-2xl font-bold mb-2">That Sunrise Hike</h3>
+              <p class="text-white/90">When we got up at 4am to watch the sunrise from the mountaintop</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="group rounded-xl overflow-hidden shadow-lg relative animate-on-scroll">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/69fbe14f-ca49-4b6f-9fc5-7763cf584983.png" alt="Couple dancing under string lights at outdoor wedding, looking at each other lovingly" class="w-full h-64 object-cover transition-all duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+            <div>
+              <h3 class="text-white text-2xl font-bold mb-2">Our First Dance</h3>
+              <p class="text-white/90">When we danced like no one was watching at Sarah's wedding</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="group rounded-xl overflow-hidden shadow-lg relative animate-on-scroll">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/bf619875-a0ef-4b4b-8f12-b83b720d79cc.png" alt="Couple cooking together in a cozy kitchen, flour on faces from baking mishap" class="w-full h-64 object-cover transition-all duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+            <div>
+              <h3 class="text-white text-2xl font-bold mb-2">The Baking Disaster</h3>
+              <p class="text-white/90">That time we tried to bake a cake and ended up covered in flour</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="group rounded-xl overflow-hidden shadow-lg relative animate-on-scroll">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0cb896b1-0873-4b84-b420-9c802758d24c.png" alt="Couple stargazing on a blanket, pointing at constellations with warm drinks" class="w-full h-64 object-cover transition-all duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p=6">
+            <div>
+              <h3 class="text-white text-2xl font-bold mb-2">Midnight Stargazing</h3>
+              <p class="text-white/90">When we drove to the countryside to watch shooting stars</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="group rounded-xl overflow-hidden shadow-lg relative animate-on-scroll">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0497e5b5-f279-4905-bf3f-b499611a0994.png" alt="Couple playing with golden retriever puppy in autumn leaves, laughing together" class="w-full h-64 object-cover transition-all duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+            <div>
+              <h3 class="text-white text-2xl font-bold mb-2">Puppy Playtime</h3>
+              <p class="text-white/90">The day we spent hours playing with that adorable puppy at the park</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="group rounded-xl overflow-hidden shadow-lg relative animate-on-scroll">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8298b584-3c26-4268-9a51-0ff32062c7bc.png" alt="Surprise proposal moment at beach sunset, one knee in sand with shocked happy expression" class="w-full h-64 object-cover transition-all duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+            <div>
+              <h3 class="text-white text-2xl font-bold mb-2">The Best Yes</h3>
+              <p class="text-white/90">When you said yes to forever with me</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Birthday Message Section -->
+  <section class="py-20 bg-gradient-to-b from-pink-100 to-purple-100 relative overflow-hidden">
+    <div class="absolute inset-0 bg-pink-200 opacity-20" style="background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg width=\"100\" height=\"20\" viewBox=\"0 0 100 20\" xmlns=\"http://www.w3.org/2000/svg\"%3e%3cpath d=\"M21.184 20c.357-.13.72-.264 1.088-.402l1.768-.661C33.64 15.347 39.647 14 50 14c10.271 0 15.362 1.222 24.629 4.928.955.383 1.869.74 2.75 1.072h6.225c-2.51-.73-5.139-1.691-8.233-2.928C65.888 13.278 60.562 12 50 12c-10.626 0-16.855 1.397-26.66 5.063l-1.767.662c-2.475.923-4.66 1.674-6.724 2.275h6.335zm0-20C13.258 2.892 8.077 4 0 4V2c5.744 0 9.951-.75 13.325-1.996l1.767-.662C21.338.456 24.864 0 30 0c10.271 0 15.362 1.222 24.629 4.928C84.112 6.722 89.438 8 100 8V6c-10.274 0-15.362-1.222-24.629-4.928C65.888.278 60.562 0 50 0 35.111 0 27.25 1.017 21.184 4z\" fill=\"%239C92AC\" fill-opacity=\".25\" fill-rule=\"evenodd\"/%3e%3c/svg%3e')"> 
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-4xl mx-auto bg-white/80 backdrop-blur-sm p-8 md:p-12 rounded-xl shadow-lg">
+        <h2 class="text-4xl md:text-5xl font-bold dancing-font text-center text-pink-600 mb-8">My Birthday Wish For You</h2>
+        
+        <div class="prose prose-lg text-pink-900 max-w-none">
+          <p class="text-xl mb-6">On this special day, my love, I want you to know how incredibly grateful I am to have you in my life.</p>
+          
+          <p class="text-xl mb-6">May this year bring you as much happiness as you've brought into my life. May you always know how loved, valued, and cherished you are - not just today, but every single day.</p>
+          
+          <p class="text-xl mb-6">I promise to keep making you laugh, to be there through all of life's ups and downs, and to cherish every moment we have together.</p>
+          
+          <p class="text-3xl dancing-font text-center text-pink-700 mt-10">Happy Birthday My Love</p>
+          <p class="text-2xl dancing-font text-center text-pink-600">You mean everything to me</p>
+        </div>
+      </div>
+      
+      <div class="mt-16 text-center animate-bounce">
+        <div class="heartbeat inline-block">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-pink-600" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gradient-to-r from-purple-700 to-pink-600 text-white py-12">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-xl dancing-font mb-4">Made with love for the most amazing woman in the world</p>
+      <p class="opacity-80">© 2023 Your Loving Partner. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Confetti effect
+    const canvas = document.getElementById('confetti');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    
+    const colors = ['#ff7eb9', '#ff65a3', '#7afcff', '#feff9c', '#fff740'];
+    
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    
+    window.addEventListener('resize', resizeCanvas);
+    
+    function Confetti() {
+      this.x = Math.random() * canvas.width;
+      this.y = Math.random() * canvas.height - canvas.height;
+      this.diameter = Math.random() * 10 + 5;
+      this.color = colors[Math.floor(Math.random() * colors.length)];
+      this.speed = Math.random() * 3 + 1;
+      this.angle = Math.random() * 360;
+      this.spin = Math.random() < 0.5 ? -1 : 1;
+      this.rotationSpeed = Math.random() * 5;
+      
+      this.update = function() {
+        this.y += this.speed;
+        this.angle += this.rotationSpeed * this.spin;
+        
+        if (this.y > canvas.height) {
+          this.y = -this.diameter;
+          this.x = Math.random() * canvas.width;
+        }
+      };
+      
+      this.draw = function() {
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        ctx.rotate(this.angle * Math.PI / 180);
+        
+        ctx.fillStyle = this.color;
+        ctx.beginPath();
+        ctx.rect(-this.diameter/2, -this.diameter/2, this.diameter, this.diameter);
+        ctx.closePath();
+        ctx.fill();
+        
+        ctx.restore();
+      };
+    }
+    
+    const confettiPieces = [];
+    for (let i = 0; i < 100; i++) {
+      confettiPieces.push(new Confetti());
+    }
+    
+    function animateConfetti() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      for (let i = 0; i < confettiPieces.length; i++) {
+        confettiPieces[i].update();
+        confettiPieces[i].draw();
+      }
+      
+      requestAnimationFrame(animateConfetti);
+    }
+    
+    animateConfetti();
+    
+    // Scroll animations
+    function checkScroll() {
+      const elements = document.querySelectorAll('.animate-on-scroll');
+      
+      elements.forEach(element => {
+        const elementPosition = element.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.2;
+        
+        if (elementPosition < screenPosition) {
+          element.classList.add('visible');
+        }
+      });
+    }
+    
+    window.addEventListener('scroll', checkScroll);
+    window.addEventListener('load', checkScroll);
+    
+    // Typewriter effect for hero text
+    const heroText = document.querySelector('.hero-text');
+    if (heroText) {
+      const text = heroText.textContent;
+      heroText.textContent = '';
+      
+      let i = 0;
+      const typeWriter = () => {
+        if (i < text.length) {
+          heroText.textContent += text.charAt(i);
+          i++;
+          setTimeout(typeWriter, 50);
+        }
+      };
+      
+      typeWriter();
+    }
+  </script>
+</body>
+</html>
+
